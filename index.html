@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <b><em><u><s>e</s></u></em></b> -->
+        <meta name="author" content="Bemuse">
+        <meta name="desc" content="kobayashi-san chi no maid dragon animation break time">
+        <meta name="libs" content="vue.js">
+        <meta name="keywords" content="html, css, js, vue.js, kobayashi-san, maid dragon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <script src="assets/js/vue.min.js"></script>
+        <script src="assets/js/point.js"></script>
+        <script src="assets/js/param.js"></script>
+        <script src="assets/js/main.method.js"></script>
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="letter-wrap">
+                <div id="letter">
+                    <div
+                        class="letter-element"
+                        v-for="i in arr.letter"
+                        :key="i.id"
+                    >
+                        <div class="letter-element-point"><div :style="i.style.point"></div></div>
+                        <div class="letter-element-char"><div :style="i.style.char"><span>{{i.text}}</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

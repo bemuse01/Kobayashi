@@ -1,0 +1,81 @@
+@font-face{
+    src: url('../font/GothicA1-Bold.ttf');
+    font-family: GothicA1Bold;
+}
+
+
+
+
+/* transition */
+.letter-transition-enter-active{
+    transition: all 0.3s;
+}
+.letter-transition-leave-active{
+    transition: all 0.3s;
+}
+.letter-transition-enter{
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+.letter-transition-leave-to{
+    opacity: 0;
+    transform: rotateY(-90deg);
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #fde93c;
+    overflow: hidden;
+    font-family: GothicA1Bold;
+    font-size: 15vh;
+}
+
+
+
+
+/* letter */
+div#letter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vh * 200 * 5 / 1080);
+}
+div.letter-element{
+    position: relative;
+    float: left;
+    width: calc(100vh * 200 / 1080);
+    height: calc(100vh * 240 / 1080);
+    text-align: center;
+}
+/* letter point */
+div.letter-element-point{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+div.letter-element-point > div{
+    width: calc(100vh * 32 / 1080);
+    height: calc(100vh * 32 / 1080);
+    background: black;
+    border-radius: 50%;
+    /* transition: opacity 0.1s, transform 0.2s cubic-bezier(0.22, 1.08, 0.3, .98); */
+}
+/* letter char */
+div.letter-element-char{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* div.letter-element-char > div{
+    transition: opacity 0.1s 0.1s, transform 0.14s 0.075s cubic-bezier(.24,.89,.72,1.6);
+} */
